@@ -24,6 +24,11 @@ const categories: Record<string, { name: string; icon: string; description: stri
     icon: '🍪',
     description: 'بسكويت، ويفر، وبارات حلوة وخفيفة',
   },
+  'oriental-sweets': {
+    name: 'حلويات شرقية',
+    icon: '🌰',
+    description: 'بقلاوة، معمول، وحلويات عربية فاخرة',
+  },
 }
 
 export async function generateStaticParams() {
