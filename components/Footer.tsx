@@ -71,7 +71,7 @@ export default function Footer() {
             {
               title: 'السياسات',
               links: [
-                { name: 'شروط وأحكام', href: '/policies/terms' },
+                { name: 'الشروط والأحكام', href: '/policies/terms' },
                 { name: 'سياسة الخصوصية', href: '/policies/privacy' },
                 { name: 'الاسترجاع والاستبدال', href: '/policies/refund-policy' },
                 { name: 'سياسة الإلغاء', href: '/policies/cancel-policy' }

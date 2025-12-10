@@ -4,7 +4,7 @@ export default function JoinUsPage() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold mb-8 text-gray-800 text-center">انضم إلى كاندي السعودية</h1>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p className="text-xl leading-relaxed">
               نبحث عن مواهب شغوفة بالحلوى والتجارة الإلكترونية لنقدم تجربة تسوق لذيذة وآمنة لعملائنا في المملكة.
@@ -96,8 +96,8 @@ export default function JoinUsPage() {
                 </p>
                 <p className="mb-2">
                   <strong>الهاتف:</strong>{' '}
-                  <a href="tel:+966537705861" className="text-emerald-600 hover:underline">
-                    +966537705861
+                  <a href="tel:+966532864369" className="text-emerald-600 hover:underline">
+                    +966532864369
                   </a>
                 </p>
                 <p>
