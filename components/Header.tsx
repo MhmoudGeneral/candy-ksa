@@ -101,33 +101,33 @@ export default function Header() {
           </div>
         </div>
 
-            {/* Mobile Menu */}
-            {isMenuOpen && (
-              <div className="md:hidden py-4 border-t">
-                <nav className="flex flex-col space-y-4">
-                  <Link href="/" className={navLinkClass}>
-                    الرئيسية
-                  </Link>
-                  <Link href="/categories" className={navLinkClass}>
-                    الحلويات
-                  </Link>
-                  <Link href="/about" className={navLinkClass}>
-                    عن كاندي
-                  </Link>
-                  <Link href="/sell" className={navLinkClass}>
-                    توريد بالجملة
-                  </Link>
-                  <Link href="/join-us" className={navLinkClass}>
-                    شركاء كاندي
-                  </Link>
-                  <a href="tel:+966532864369" className="text-gray-600 hover:text-emerald-600">
-                    +966532864369                  </a>
-                  <a href="mailto:support@candyksa.com" className="text-gray-600 hover:text-emerald-600">
-                    support@candyksa.com
-                  </a>
-                </nav>
-              </div>
-            )}
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t">
+            <nav className="flex flex-col space-y-4">
+              <Link href="/" className={navLinkClass}>
+                الرئيسية
+              </Link>
+              <Link href="/categories" className={navLinkClass}>
+                الحلويات
+              </Link>
+              <Link href="/about" className={navLinkClass}>
+                عن كاندي
+              </Link>
+              <Link href="/sell" className={navLinkClass}>
+                توريد بالجملة
+              </Link>
+              <Link href="/join-us" className={navLinkClass}>
+                شركاء كاندي
+              </Link>
+              <a href="tel:+966532864369" className="text-gray-600 hover:text-emerald-600">
+                +966532864369                  </a>
+              <a href="mailto:support@candyksa.com" className="text-gray-600 hover:text-emerald-600">
+                support@candyksa.com
+              </a>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   )

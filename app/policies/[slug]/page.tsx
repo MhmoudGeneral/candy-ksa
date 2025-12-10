@@ -960,9 +960,11 @@ export default async function PolicyPage({ params }: { params: Promise<{ slug: s
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold mb-8 text-gray-800">{policy.title}</h1>
-          <ReactMarkdown className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-strong:text-gray-900 prose-a:text-emerald-700">
-            {normalizeMarkdown(policy.content)}
-          </ReactMarkdown>
+          <div className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-strong:text-gray-900 prose-a:text-emerald-700">
+            <ReactMarkdown>
+              {normalizeMarkdown(policy.content)}
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </div>
