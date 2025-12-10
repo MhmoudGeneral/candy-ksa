@@ -50,9 +50,33 @@ export default function Footer() {
           </div>
 
           {[
-            { title: 'روابط هامة', links: ['الرئيسية', 'الحلويات', 'الهدايا', 'عن كاندي'] },
-            { title: 'خدمة العملاء', links: ['تتبع الطلب', 'أسئلة شائعة', 'اتصل بنا', 'الفروع'] },
-            { title: 'السياسات', links: ['شروط وأحكام', 'سياسة الخصوصية', 'الاسترجاع والاستبدال', 'سياسة الإلغاء'] }
+            {
+              title: 'روابط هامة',
+              links: [
+                { name: 'الرئيسية', href: '/' },
+                { name: 'الحلويات', href: '/categories' },
+                { name: 'عن كاندي', href: '/about' },
+                { name: 'سلة المشتريات', href: '/cart' }
+              ]
+            },
+            {
+              title: 'فرص وتوريد',
+              links: [
+                { name: 'توريد بالجملة', href: '/sell' },
+                { name: 'شركاء كاندي', href: '/join-us' },
+                { name: 'انضم للفريق', href: '/join-us' },
+                { name: 'تواصل معنا', href: 'https://wa.me/966532864369' }
+              ]
+            },
+            {
+              title: 'السياسات',
+              links: [
+                { name: 'شروط وأحكام', href: '/policies/terms' },
+                { name: 'سياسة الخصوصية', href: '/policies/privacy' },
+                { name: 'الاسترجاع والاستبدال', href: '/policies/refund-policy' },
+                { name: 'سياسة الإلغاء', href: '/policies/cancel-policy' }
+              ]
+            }
           ].map((section, idx) => (
             <div key={idx} className="lg:col-span-2">
               <h4 className="text-lg font-bold text-white mb-6 relative inline-block pb-2">
@@ -61,10 +85,10 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="text-gray-400 text-sm hover:text-emerald-300 transition-all duration-300 hover:tracking-wide hover:translate-x-[-5px] flex items-center gap-2 group">
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-gray-400 text-sm hover:text-emerald-300 transition-all duration-300 hover:tracking-wide hover:translate-x-[-5px] flex items-center gap-2 group">
                       <span className="w-1.5 h-1.5 bg-gray-700 rounded-full group-hover:bg-emerald-400 group-hover:shadow-[0_0_8px_#34d399] transition-all duration-300"></span>
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
