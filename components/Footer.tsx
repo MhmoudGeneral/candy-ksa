@@ -11,8 +11,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="relative h-12 w-12">
-                <Image src="/logo.png" alt="شعار كاندي السعودية" fill sizes="48px" className="object-contain" />
+              <div className="relative h-16 w-16">
+                <Image src="/logo.png" alt="شعار كاندي السعودية" fill sizes="64px" className="object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-extrabold text-emerald-300">كاندي السعودية</h3>

@@ -19,12 +19,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-10 w-10 md:h-12 md:w-12">
+            <div className="relative h-14 w-14 md:h-16 md:w-16">
               <Image
                 src="/logo.png"
                 alt="شعار كاندي السعودية"
                 fill
-                sizes="48px"
+                sizes="64px"
                 className="object-contain"
                 priority
               />
