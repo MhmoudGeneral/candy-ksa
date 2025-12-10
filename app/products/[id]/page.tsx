@@ -4,41 +4,64 @@ import Link from 'next/link'
 import productsData from '@/utils/products.json'
 import AddToCartButton from '@/components/AddToCartButton'
 
-// Generate fake reviews
+// Generate fake reviews based on product ID to ensure variety
 const generateReviews = (productId: string) => {
-  const reviews = [
-    {
-      name: 'أحمد محمد',
-      rating: 5,
-      comment: 'منتج رائع جداً! الجودة ممتازة والتوصيل كان سريعاً. أنصح الجميع بشرائه.',
-      date: 'منذ 3 أيام',
-    },
-    {
-      name: 'فاطمة علي',
-      rating: 4,
-      comment: 'جيد جداً، لكن السعر مرتفع قليلاً. بشكل عام راضية عن الشراء.',
-      date: 'منذ أسبوع',
-    },
-    {
-      name: 'خالد عبدالله',
-      rating: 5,
-      comment: 'أفضل منتج اشتريته! الجودة ممتازة والتوصيل سريع. شكراً كاندي السعودية.',
-      date: 'منذ أسبوعين',
-    },
-    {
-      name: 'سارة أحمد',
-      rating: 5,
-      comment: 'خدمة عملاء ممتازة ومنتج أصلي. التوصيل كان خلال يومين فقط.',
-      date: 'منذ 3 أسابيع',
-    },
-    {
-      name: 'محمد سالم',
-      rating: 4,
-      comment: 'منتج جيد بجودة عالية. التغليف كان احترافياً والمنتج وصل بحالة ممتازة.',
-      date: 'منذ شهر',
-    },
-  ]
-  return reviews
+  const allReviews = [
+    { name: 'أحمد محمد', comment: 'منتج رائع جداً! الجودة ممتازة والتوصيل كان سريعاً. أنصح الجميع بشرائه.' },
+    { name: 'فاطمة علي', comment: 'جيد جداً، لكن السعر مرتفع قليلاً. بشكل عام راضية عن الشراء.' },
+    { name: 'خالد عبدالله', comment: 'أفضل منتج اشتريته! الجودة ممتازة والتوصيل سريع. شكراً كاندي السعودية.' },
+    { name: 'سارة أحمد', comment: 'خدمة عملاء ممتازة ومنتج أصلي. التوصيل كان خلال يومين فقط.' },
+    { name: 'محمد سالم', comment: 'منتج جيد بجودة عالية. التغليف كان احترافياً والمنتج وصل بحالة ممتازة.' },
+    { name: 'نورة سعد', comment: 'لذيذ جداً وطازج، أعجب العائلة كلها.' },
+    { name: 'عبدالرحمن العزيز', comment: 'وصلني المنتج بحالة جيدة، لكن تأخر يوماً واحداً عن الموعد.' },
+    { name: 'ريما القحطاني', comment: 'التغليف فاخر ومناسب جداً للهدايا.' },
+    { name: 'سلطان الحربي', comment: 'الطعم خيالي ولا يقاوم، سأطلب مرة أخرى بالتأكيد.' },
+    { name: 'منى الشمري', comment: 'تجربة ممتازة من الطلب للتوصيل، شكراً لكم.' },
+    { name: 'فيصل العتيبي', comment: 'المنتج ممتاز ولكن ياليت توفرون أحجام أكبر.' },
+    { name: 'عبير ناصر', comment: 'جودة عالمية وسعر منافس.' },
+  ];
+
+  // Simple string hash to number
+  const hash = productId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+
+  // Deterministic random generator based on hash
+  const seededRandom = (seed: number) => {
+    let t = seed;
+    return () => {
+      t = (t * 1664525 + 1013904223) % 4294967296;
+      return t / 4294967296;
+    };
+  };
+
+  const rand = seededRandom(hash);
+  const numberOfReviews = Math.floor(rand() * 3) + 3; // 3 to 5 reviews
+  const selectedReviews = [];
+  const availableReviews = [...allReviews];
+
+  for (let i = 0; i < numberOfReviews; i++) {
+    if (availableReviews.length === 0) break;
+    const index = Math.floor(rand() * availableReviews.length);
+    const review = availableReviews.splice(index, 1)[0];
+
+    // Generate a random date relative to now
+    const daysAgo = Math.floor(rand() * 30) + 1;
+    let dateStr = '';
+    if (daysAgo === 1) dateStr = 'منذ يوم';
+    else if (daysAgo === 2) dateStr = 'منذ يومين';
+    else if (daysAgo <= 10) dateStr = `منذ ${daysAgo} أيام`;
+    else if (daysAgo <= 30) dateStr = `منذ ${Math.floor(daysAgo / 7) || 1} أسابيع`;
+
+    // Generate random rating 4 or 5
+    const rating = rand() > 0.3 ? 5 : 4;
+
+    selectedReviews.push({
+      ...review,
+      rating,
+      date: dateStr,
+    });
+  }
+
+  return selectedReviews;
 }
 
 export async function generateStaticParams() {
