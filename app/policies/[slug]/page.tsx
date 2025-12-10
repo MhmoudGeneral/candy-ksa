@@ -1,4 +1,15 @@
 import { notFound } from 'next/navigation'
+import ReactMarkdown from 'react-markdown'
+
+const normalizeMarkdown = (value: string): string => {
+  const lines = value.split('\n').map((line) => line.replace(/\s+$/, ''))
+  const indents = lines
+    .filter((line) => line.trim() !== '')
+    .map((line) => (line.match(/^(\s*)/) ?? [''])[0].length)
+  const minIndent = indents.length ? Math.min(...indents) : 0
+  const trimmed = lines.map((line) => line.slice(Math.min(minIndent, line.length))).join('\n')
+  return trimmed.trim()
+}
 
 const policies: Record<string, { title: string; content: string }> = {
   privacy: {
@@ -422,12 +433,12 @@ const policies: Record<string, { title: string; content: string }> = {
 
 ## 1. مقدمة
 
-نرحب بكم في متجر يوتوبيا الإلكتروني. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام موقعنا وخدماتنا. باستخدام موقعنا، أنت توافق على الالتزام بهذه الشروط.
+نرحب بكم في متجر كاندي السعودية الإلكتروني. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام موقعنا وخدماتنا. باستخدام موقعنا، أنت توافق على الالتزام بهذه الشروط.
 
 ## 2. تعريفات
 
-- **"الموقع"** يشير إلى الموقع الإلكتروني لمتجر يوتوبيا والمتاح عبر الإنترنت على النطاقات التي نعلن عنها رسمياً
-- **"نحن" أو "الشركة"** يشير إلى متجر يوتوبيا
+- **"الموقع"** يشير إلى الموقع الإلكتروني لمتجر كاندي السعودية والمتاح عبر الإنترنت على النطاقات التي نعلن عنها رسمياً
+- **"نحن" أو "الشركة"** يشير إلى متجر كاندي السعودية
 - **"أنت" أو "المستخدم"** يشير إلى أي شخص يزور أو يستخدم الموقع
 - **"المنتجات"** تشير إلى جميع السلع والخدمات المعروضة على الموقع
 - **"الطلب"** يشير إلى طلب شراء منتج من خلال الموقع
@@ -1033,9 +1044,9 @@ export default async function PolicyPage({ params }: { params: Promise<{ slug: s
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold mb-8 text-gray-800">{policy.title}</h1>
-          <div className="prose prose-lg max-w-none text-gray-700 whitespace-pre-line">
-            {policy.content}
-          </div>
+          <ReactMarkdown className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-strong:text-gray-900 prose-a:text-emerald-700">
+            {normalizeMarkdown(policy.content)}
+          </ReactMarkdown>
         </div>
       </div>
     </div>

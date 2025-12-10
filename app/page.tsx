@@ -2,13 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import productsData from '@/utils/products.json'
-
-const categories = [
-  { slug: 'chocolates', name: 'شوكولاتة', icon: '🍫', hint: 'ألواح، محشيات، وشوكولاتة فاخرة' },
-  { slug: 'candy', name: 'حلويات مغلفة', icon: '🍬', hint: 'سكرّيات، تافي، ومارشميلو' },
-  { slug: 'gummies', name: 'جيلي وعلك', icon: '🐻', hint: 'دببة، ديدان حامضة، وعلك فواكه' },
-  { slug: 'biscuits', name: 'بسكويت وبارات', icon: '🍪', hint: 'بسكويت، ويفر، وبارات لذيذة' },
-]
+import categoriesData from '@/utils/categories.json'
 
 export default function HomePage() {
   const featuredProducts = productsData.slice(0, 8)
@@ -30,7 +24,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {categories.map((category) => (
+            {categoriesData.map((category) => (
               <Link
                 key={category.slug}
                 href={`/categories/${category.slug}`}

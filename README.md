@@ -1,4 +1,4 @@
-# يوتوبيا - Utopia E-commerce Website
+# كاندي السعودية - Candy KSA E-commerce Website
 
 موقع إلكتروني متكامل للتجارة الإلكترونية باللغة العربية مع دعم RTL (من اليمين لليسار).
 
@@ -24,51 +24,23 @@
 ### 1. تثبيت المتطلبات
 
 ```bash
-npm install
+pnpm install
 ```
 
-### 2. إضافة صور المنتجات
-
-أضف صور المنتجات في المجلد `public/images/products/` بالأسماء التالية:
-
-- `UTB-PRO-14.jpg`
-- `UTB-AIR-LT.jpg`
-- `LNV-X1-2025.jpg`
-- `HPS-X360-25.jpg`
-- `DXPS-13V.jpg`
-- `SAM-CUHD-55.jpg`
-- `LG-OLED65.jpg`
-- `SNY-XR75.jpg`
-- `TCL-Q55.jpg`
-- `HIS-50K.jpg`
-- `AP-IP15P.jpg`
-- `SAM-S24U.jpg`
-- `GG-PIX9.jpg`
-- `UTB-BUDS.jpg`
-- `UTB-WC15.jpg`
-
-### 3. تشغيل المشروع
+### 2. تشغيل المشروع
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 افتح [http://localhost:3000](http://localhost:3000) في المتصفح.
 
-### 4. بناء المشروع للإنتاج
+### 3. بناء المشروع للإنتاج
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
-
-### 5. توليد XML Feed
-
-```bash
-npm run generate-feed
-```
-
-سيتم إنشاء الملف في `public/feeds/utopia-feed.xml`
 
 ## هيكل المشروع
 
@@ -92,7 +64,7 @@ npm run generate-feed
 │   ├── images/
 │   │   └── products/       # صور المنتجات
 │   └── feeds/
-│       └── utopia-feed.xml # XML Feed
+│       └── google.xml      # XML Feed
 ├── scripts/
 │   └── generate-static-feed.ts  # سكريبت توليد Feed
 ├── types/
@@ -121,15 +93,15 @@ npm run generate-feed
 - `/policies/terms` - الشروط والأحكام
 
 ### Google Merchant Center Feed
-- `/feeds/utopia-feed.xml` - XML Feed للمنتجات
+- `/feeds/google.xml` - XML Feed للمنتجات
 
 ## معلومات المتجر
 
-- **الاسم:** يوتوبيا (Utopia)
+- **الاسم:** كاندي السعودية (Candy KSA)
 - **البلد:** المملكة العربية السعودية
 - **العملة:** ريال سعودي (SAR)
-- **البريد الإلكتروني:** support@test.certificates-guide.info
-- **الهاتف:** +966567502809
+- **البريد الإلكتروني:** support@candyksa.com
+- **الهاتف:** +966537705861
 - **ساعات العمل:** من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
 ## Google Merchant Center
@@ -148,7 +120,7 @@ npm run generate-feed
 1. سجل الدخول إلى [Google Merchant Center](https://merchants.google.com)
 2. اذهب إلى **Products** > **Feeds**
 3. أضف Feed جديد
-4. أدخل الرابط: `https://arzaq.app/feeds/utopia-feed.xml`
+4. أدخل الرابط: `https://www.candyksa.com/feeds/google.xml`
 5. اختر **Scheduled fetch** أو **Upload**
 
 ## التخصيص
@@ -170,11 +142,11 @@ npm run generate-feed
 
 ## الترخيص
 
-هذا المشروع خاص ومملوك لـ يوتوبيا.
+هذا المشروع خاص ومملوك لـ كاندي السعودية.
 
 ## الدعم
 
 للدعم الفني، يرجى التواصل:
-- البريد الإلكتروني: support@test.certificates-guide.info
-- الهاتف: +966567502809
+- البريد الإلكتروني: support@candyksa.com
+- الهاتف: +966537705861
 
