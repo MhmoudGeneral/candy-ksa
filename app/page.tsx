@@ -121,37 +121,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partners */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900">
-            شركاؤنا
-          </h2>
-          <p className="text-center text-gray-600 mb-8 text-sm md:text-base max-w-2xl mx-auto">
-            شبكة من الموردين والعلامات التجارية التي تثق في كاندي السعودية لتقديم أفضل الحلوى والشوكولاتة
-            للمستخدمين في المملكة.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6 items-center">
-            {Array.from({ length: 26 }).map((_, index) => {
-              const n = index + 1
-              return (
-                <div
-                  key={n}
-                  className="bg-gray-50 rounded-xl border border-gray-100 p-3 flex items-center justify-center"
-                >
-                  <Image
-                    src={`/partner/${n}.png`}
-                    alt={`شريك رقم ${n}`}
-                    width={120}
-                    height={60}
-                    className="object-contain max-h-12"
-                  />
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+
 
       {/* Delivery & Freshness */}
       <section className="py-14 bg-emerald-50">
