@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   description:
     'كاندي السعودية وجهتك لكل ما لذ وطاب من شوكولاتة، حلوى، علك وجيلي مع توصيل سريع داخل المملكة.',
   keywords: 'كاندي, كاندي السعودية, حلويات, شوكولاتة, ام اند امز, جالاكسي, كادبوري, السعودية',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({
