@@ -104,7 +104,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 src={product.image}
                 alt={product.nameAr}
                 fill
-                className="object-cover"
+                className="object-contain p-2"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute top-4 right-4 flex gap-2">
@@ -150,7 +150,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               <div className="rounded-2xl bg-emerald-50 border border-emerald-100 p-4">
                 <h3 className="font-semibold text-emerald-800 mb-2">الشحن والتخزين</h3>
                 <p className="text-sm text-gray-700">
-                  🚚 توصيل مبرد 1-2 يوم للمدن الرئيسية، و2-4 أيام لباقي المناطق. شحن مجاني للطلبات 150 ريال+.
+                  🚚 توصيل مبرد 1-4 أيام لجميع المدن. شحن مجاني لجميع الطلبات.
                 </p>
               </div>
               <div className="rounded-2xl bg-pink-50 border border-pink-100 p-4">

@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="flex gap-3 pt-6">
               {/* WhatsApp Button */}
               <a
-                href="https://api.whatsapp.com/send/?phone=966594386234&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=966532864369&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:-translate-y-1 group"
@@ -65,7 +65,7 @@ export default function Footer() {
                 { name: 'توريد بالجملة', href: '/sell' },
                 { name: 'شركاء كاندي', href: '/join-us' },
                 { name: 'انضم للفريق', href: '/join-us' },
-                { name: 'تواصل معنا', href: 'https://wa.me/966532864369' }
+                { name: 'تواصل معنا', href: '/contact' }
               ]
             },
             {
@@ -74,6 +74,7 @@ export default function Footer() {
                 { name: 'الشروط والأحكام', href: '/policies/terms' },
                 { name: 'سياسة الخصوصية', href: '/policies/privacy' },
                 { name: 'الاسترجاع والاستبدال', href: '/policies/refund-policy' },
+                { name: 'سياسة الشحن والتوصيل', href: '/policies/shipping' },
                 { name: 'سياسة الإلغاء', href: '/policies/cancel-policy' }
               ]
             }
