@@ -9,11 +9,7 @@ const categories: Record<string, { name: string; icon: string; description: stri
     icon: '🍫',
     description: 'ألواح، بارات، ومحشيات بنكهات متعددة',
   },
-  candy: {
-    name: 'حلويات مغلفة',
-    icon: '🍬',
-    description: 'سكرّيات ملونة، تافي، ومارشميلو',
-  },
+
   gummies: {
     name: 'جيلي وعلك',
     icon: '🐻',
