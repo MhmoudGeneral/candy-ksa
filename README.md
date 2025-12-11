@@ -120,7 +120,7 @@ pnpm start
 1. سجل الدخول إلى [Google Merchant Center](https://merchants.google.com)
 2. اذهب إلى **Products** > **Feeds**
 3. أضف Feed جديد
-4. أدخل الرابط: `https://www.candyksa.com/feeds/google.xml`
+4. أدخل الرابط: `https://candyksa.com/feeds/google.xml`
 5. اختر **Scheduled fetch** أو **Upload**
 
 ## التخصيص

@@ -2,7 +2,8 @@ import products from '@/utils/products.json'
 import { getProductImage } from '@/utils/imagePlaceholders'
 import type { Product } from '@/types/product'
 
-const BASE_URL = 'https://www.candyksa.com'
+const BASE_URL = 'https://candyksa.com'
+
 
 const categoryToGoogle = (categorySlug: string): string => {
   switch (categorySlug) {
@@ -58,11 +59,6 @@ const renderItem = (product: Product): string => {
         <g:rate>15</g:rate>
         <g:tax_ship>yes</g:tax_ship>
       </g:tax>
-      <g:shipping>
-        <g:country>SA</g:country>
-        <g:service>Standard</g:service>
-        <g:price>25 SAR</g:price>
-      </g:shipping>
     </item>
   `
 }
@@ -74,7 +70,7 @@ export async function GET() {
     <title>كاندي السعودية - Candy Feed</title>
     <link>${BASE_URL}/</link>
     <description>كاندي السعودية - تشكيلة مختارة من الشوكولاتة والحلويات مع توصيل سريع.</description>
-    ${ (products as Product[]).map(renderItem).join('\n') }
+    ${(products as Product[]).map(renderItem).join('\n')}
   </channel>
 </rss>`
 
