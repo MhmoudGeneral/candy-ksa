@@ -44,7 +44,7 @@ export default function CartPage() {
   }
 
   const totalPrice = getTotalPrice()
-  const shippingFee = totalPrice >= 150 ? 0 : 25
+  const shippingFee = 0
   const finalTotal = totalPrice + shippingFee
 
   return (
@@ -161,12 +161,6 @@ export default function CartPage() {
                     )}
                   </span>
                 </div>
-                {totalPrice < 150 && (
-                  <p className="text-sm text-gray-600">
-                    أضف {new Intl.NumberFormat('ar-SA', { style: 'currency', currency: 'SAR' }).format(150 - totalPrice)}{' '}
-                    للحصول على شحن مجاني
-                  </p>
-                )}
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-xl font-bold text-gray-800">
                     <span>الإجمالي</span>
