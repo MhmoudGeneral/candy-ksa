@@ -230,7 +230,7 @@ const policies: Record<string, { title: string; content: string }> = {
 
 ### 4.1 طلب الإرجاع
 لإرجاع منتج، يرجى اتباع الخطوات التالية:
-1. اتصل بنا على + 966532864369 أو أرسل بريداً إلكترونياً إلى support @candyksa.com
+1. اتصل بنا على + 966532864369 أو أرسل بريداً إلكترونياً إلى support@candyksa.com
 2. قدم رقم الطلب ورقم المنتج
 3. اشرح سبب الإرجاع
 4. التقط صوراً للمنتج(إن أمكن)
@@ -350,7 +350,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 14. الاتصال بنا
 
 للاستفسارات حول الإرجاع والاسترداد:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
@@ -461,7 +461,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 17. الاتصال بنا
 
 للاستفسارات حول الشروط والأحكام:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
@@ -580,7 +580,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 12. الاتصال بنا
 
 للاستفسارات حول سياسة الاستخدام:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
@@ -614,7 +614,7 @@ const policies: Record<string, { title: string; content: string }> = {
 
 لطلب الإرجاع:
 - التواصل معنا عبر:
-- الايميل : support @candyksa.com
+- الايميل : support@candyksa.com
 - رقم الهاتف: +966532864369
   - تزويدنا بـ:
 - رقم الطلب
@@ -646,7 +646,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 8. التواصل معنا
 
 للاستفسارات حول الإرجاع والاسترداد:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
@@ -666,7 +666,7 @@ const policies: Record<string, { title: string; content: string }> = {
 - التواصل معنا خلال مدة لا تتجاوز 24 ساعة من وقت الطلب
   - عبر:
 - الهاتف: +966532864369
-  - البريد الإلكتروني: support @candyksa.com
+  - البريد الإلكتروني: support@candyksa.com
 
 في هذه الحالة:
 - يتم استرداد كامل المبلغ
@@ -707,7 +707,7 @@ const policies: Record<string, { title: string; content: string }> = {
 
 ## 6. التواصل معنا
 
-  - البريد الإلكتروني: support @candyksa.com
+  - البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا – 10 مساءً
 
@@ -784,7 +784,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 10. الاتصال بنا
 
 للاستفسارات حول نقاط كاندي:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
@@ -854,7 +854,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 7. الإبلاغ عن الانتهاكات
 
 إذا كنت تعتقد أن محتوى على المنصة ينتهك حقوقك:
-- اتصل بنا على support @candyksa.com
+- اتصل بنا على support@candyksa.com
 - قدم معلومات كافية عن الانتهاك
   - سنراجع الطلب وناتخذ الإجراءات اللازمة
 
@@ -868,7 +868,7 @@ const policies: Record<string, { title: string; content: string }> = {
 ## 9. الاتصال بنا
 
 للاستفسارات حول حقوق النشر:
-- البريد الإلكتروني: support @candyksa.com
+- البريد الإلكتروني: support@candyksa.com
 - الهاتف: +966532864369
   - ساعات العمل: من الأحد إلى الخميس: 9 صباحًا - 10 مساءً
 
