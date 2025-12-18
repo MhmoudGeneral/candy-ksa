@@ -9,7 +9,7 @@ export default function CheckoutPage() {
   const router = useRouter()
   const { cartItems, getTotalPrice, clearCart } = useCart()
   const totalPrice = getTotalPrice()
-  const shippingFee = totalPrice >= 150 ? 0 : 25
+  const shippingFee = 0
   const finalTotal = totalPrice + shippingFee
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function CheckoutPage() {
 
     setIsSubmitting(false)
     clearCart() // Clear cart after successful order
-    
+
     // Redirect to thank you page
     router.push(`/thank-you?orderId=${orderData.orderId}`)
   }
@@ -291,7 +291,7 @@ export default function CheckoutPage() {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-lg p-6 sticky top-24">
               <h2 className="text-xl font-bold mb-4 text-gray-800">ملخص الطلب</h2>
-              
+
               {/* Cart Items Summary */}
               <div className="mb-4 max-h-64 overflow-y-auto space-y-3">
                 {cartItems.map((item) => (
@@ -329,12 +329,7 @@ export default function CheckoutPage() {
                     )}
                   </span>
                 </div>
-                {totalPrice < 150 && (
-                  <p className="text-xs text-gray-600">
-                    أضف {new Intl.NumberFormat('ar-SA', { style: 'currency', currency: 'SAR' }).format(150 - totalPrice)}{' '}
-                    للحصول على شحن مجاني
-                  </p>
-                )}
+
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-lg font-bold text-gray-800">
                     <span>الإجمالي</span>
