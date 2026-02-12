@@ -54,11 +54,7 @@ const renderItem = (product: Product): string => {
       <g:mpn>${escapeXml(product.mpn)}</g:mpn>
       <g:google_product_category>${googleCategory}</g:google_product_category>
       <g:product_type>${escapeXml(product.category)}</g:product_type>
-      <g:tax>
-        <g:country>SA</g:country>
-        <g:rate>15</g:rate>
-        <g:tax_ship>yes</g:tax_ship>
-      </g:tax>
+
     </item>
   `
 }
