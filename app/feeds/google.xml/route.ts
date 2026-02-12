@@ -44,7 +44,7 @@ const renderItem = (product: Product): string => {
     <item>
       <g:id>${escapeXml(product.id)}</g:id>
       <g:title>${escapeXml(product.nameAr)}</g:title>
-      <g:description>${escapeXml(product.shortDescription)}</g:description>
+      <g:description>${escapeXml(product.description || product.shortDescription)}</g:description>
       <g:link>${productUrl}</g:link>
       <g:image_link>${img}</g:image_link>
       <g:availability>${product.availability === 'in_stock' ? 'in stock' : 'out of stock'}</g:availability>
@@ -70,7 +70,7 @@ export async function GET() {
     <title>كاندي السعودية - Candy Feed</title>
     <link>${BASE_URL}/</link>
     <description>كاندي السعودية - تشكيلة مختارة من الشوكولاتة والحلويات مع توصيل سريع.</description>
-    ${(products as Product[]).map(renderItem).join('\n')}
+    ${(products as unknown as Product[]).map(renderItem).join('\n')}
   </channel>
 </rss>`
 
