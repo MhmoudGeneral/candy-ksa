@@ -81,13 +81,17 @@ function ThankYouContent() {
               </svg>
             </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">شكراً لك!</h1>
-            <p className="text-xl text-gray-600 mb-2">
+            <p className="text-xl text-emerald-600 font-semibold mb-6">
               تم استلام طلبك بنجاح
             </p>
             {orderId && (
-              <p className="text-sm text-gray-500">
-                رقم الطلب: <span className="font-semibold">{orderId}</span>
-              </p>
+              <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6 inline-block min-w-[300px]">
+                <p className="text-gray-600 text-sm mb-2">رقم الطلب</p>
+                <p className="text-3xl font-black text-emerald-700 tracking-wider font-mono select-all">
+                  {orderId}
+                </p>
+                <p className="text-xs text-emerald-600/70 mt-2">يرجى الاحتفاظ برقم الطلب</p>
+              </div>
             )}
           </div>
 
