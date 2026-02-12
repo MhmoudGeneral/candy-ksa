@@ -16,7 +16,7 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="flex items-center gap-4 group cursor-pointer">
+            <Link href="/" className="flex items-center gap-4 group cursor-pointer">
               <div className="relative h-20 w-20 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]">
                 <Image src="/logo.png" alt="شعار كاندي السعودية" fill sizes="80px" className="object-contain" />
               </div>
@@ -26,7 +26,7 @@ export default function Footer() {
                 </h3>
                 <p className="text-xs font-semibold tracking-widest text-emerald-500/80 uppercase mt-1">Candy KSA Store</p>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-7 pr-2 border-r-2 border-gray-800">
               استكشف عالماً من السعادة مع تشكيلتنا الفاخرة من الحلويات المستوردة والمحلية.
               <br />
