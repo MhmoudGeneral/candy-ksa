@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/contexts/CartContext'
 
+import Script from 'next/script'
+
 const cairo = Cairo({
   subsets: ['arabic', 'latin'],
   weight: ['300', '400', '600', '700', '900'],
@@ -37,6 +39,19 @@ export default function RootLayout({
           </main>
           <Footer />
         </CartProvider>
+        <Script
+          id="merchantWidgetScript"
+          src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+          strategy="lazyOnload"
+          onLoad={() => {
+            if ((window as any).merchantwidget) {
+              (window as any).merchantwidget.start({
+                merchant_id: 5693889497,
+                position: 'BOTTOM_LEFT'
+              });
+            }
+          }}
+        />
       </body>
     </html>
   )

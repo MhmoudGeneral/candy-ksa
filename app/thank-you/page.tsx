@@ -4,6 +4,14 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState, Suspense } from 'react'
 
+
+declare global {
+  interface Window {
+    renderOptIn: any
+    gapi: any
+  }
+}
+
 function ThankYouContent() {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('orderId')
@@ -14,7 +22,48 @@ function ThankYouContent() {
     const savedOrder = localStorage.getItem('candy-last-order')
     if (savedOrder) {
       try {
-        setOrderData(JSON.parse(savedOrder))
+        const parsedOrder = JSON.parse(savedOrder)
+        setOrderData(parsedOrder)
+
+        // Estimated delivery date (current date + 3 days)
+        const deliveryDate = new Date()
+        deliveryDate.setDate(deliveryDate.getDate() + 3)
+        const deliveryDateString = deliveryDate.toISOString().split('T')[0]
+
+        // Prepare products array for the survey
+        const products = parsedOrder.items?.map((item: any) => ({
+          "gtin": item.id // Using ID as GTIN/MPN since we don't have separate GTIN, hope this matches feed
+        })) || []
+
+        // Load Google Customer Reviews script
+        window.renderOptIn = function () {
+          window.gapi.load('surveyoptin', function () {
+            window.gapi.surveyoptin.render(
+              {
+                "merchant_id": 5693889497,
+                "order_id": parsedOrder.orderId,
+                "email": parsedOrder.email,
+                "delivery_country": "SA",
+                "estimated_delivery_date": deliveryDateString,
+                "products": products
+              });
+          });
+        }
+
+        const script = document.createElement('script')
+        script.src = 'https://apis.google.com/js/platform.js?onload=renderOptIn'
+        script.async = true
+        script.defer = true
+        document.body.appendChild(script)
+
+        return () => {
+          // Cleanup if needed, though usually fine to leave for page lifetime
+          try {
+            document.body.removeChild(script)
+          } catch (e) { }
+          delete window.renderOptIn
+        }
+
       } catch (error) {
         console.error('Error loading order data:', error)
       }
