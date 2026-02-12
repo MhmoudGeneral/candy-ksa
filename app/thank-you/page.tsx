@@ -5,6 +5,8 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useState, Suspense } from 'react'
 
 
+import { useCart } from '@/contexts/CartContext'
+
 declare global {
   interface Window {
     renderOptIn: any
@@ -16,6 +18,7 @@ function ThankYouContent() {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('orderId')
   const [orderData, setOrderData] = useState<any>(null)
+  const { clearCart } = useCart()
 
   useEffect(() => {
     // Try to get order data from localStorage if available
@@ -27,6 +30,9 @@ function ThankYouContent() {
       try {
         const parsedOrder = JSON.parse(savedOrder)
         setOrderData(parsedOrder)
+
+        // Clear the cart here once we successfully loaded the order
+        clearCart()
 
         // Estimated delivery date (current date + 3 days)
         const deliveryDate = new Date()

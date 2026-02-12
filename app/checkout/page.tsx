@@ -80,18 +80,11 @@ export default function CheckoutPage() {
     }
     localStorage.setItem('candy-last-order', JSON.stringify(orderData))
 
-    // Set processing flag to prevent redirect to cart
-    localStorage.setItem('candy-last-order-processing', 'true')
-
     setIsSubmitting(false)
-    clearCart() // Now this won't trigger the redirect because of the flag
+    // We will clear the cart in the thank you page to avoid redirection issues
 
     // Redirect to thank you page
     router.push(`/thank-you?orderId=${orderData.orderId}`)
-
-    // Cleanup flag after a short delay or let thank you page handle it (cleared here for simplicity as new page loads)
-    // Actually better to clear it on thank you page load, but router.push is client side.
-    // We'll rely on the thank you page to not need cart items.
   }
 
   if (cartItems.length === 0) {
