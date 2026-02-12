@@ -21,6 +21,9 @@ function ThankYouContent() {
     // Try to get order data from localStorage if available
     const savedOrder = localStorage.getItem('candy-last-order')
     if (savedOrder) {
+      // Clean up the processing flag from checkout
+      localStorage.removeItem('candy-last-order-processing')
+
       try {
         const parsedOrder = JSON.parse(savedOrder)
         setOrderData(parsedOrder)

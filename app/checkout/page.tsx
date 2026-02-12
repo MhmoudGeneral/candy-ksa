@@ -13,7 +13,8 @@ export default function CheckoutPage() {
   const finalTotal = totalPrice + shippingFee
 
   useEffect(() => {
-    if (cartItems.length === 0) {
+    // Only redirect if cart is empty AND we haven't successfully submitted the order
+    if (cartItems.length === 0 && !localStorage.getItem('candy-last-order-processing')) {
       router.push('/cart')
     }
   }, [cartItems, router])
@@ -79,11 +80,18 @@ export default function CheckoutPage() {
     }
     localStorage.setItem('candy-last-order', JSON.stringify(orderData))
 
+    // Set processing flag to prevent redirect to cart
+    localStorage.setItem('candy-last-order-processing', 'true')
+
     setIsSubmitting(false)
-    clearCart() // Clear cart after successful order
+    clearCart() // Now this won't trigger the redirect because of the flag
 
     // Redirect to thank you page
     router.push(`/thank-you?orderId=${orderData.orderId}`)
+
+    // Cleanup flag after a short delay or let thank you page handle it (cleared here for simplicity as new page loads)
+    // Actually better to clear it on thank you page load, but router.push is client side.
+    // We'll rely on the thank you page to not need cart items.
   }
 
   if (cartItems.length === 0) {
