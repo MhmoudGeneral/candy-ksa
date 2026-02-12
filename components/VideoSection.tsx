@@ -76,17 +76,18 @@ export default function VideoSection() {
                                 </div>
                             </div>
                         ) : (
-                            // Using an iframe for YouTube as a safe fallback/example. 
-                            // In a real scenario, use video tag for self-hosted or iframe for YT.
-                            // Here using a generic pleasant candy video from Pexels (Direct link if possible) or just a YouTube embed.
-                            // Using a satisfying chocolate video ID from YouTube as placeholder.
-                            <iframe
-                                className="w-full h-full"
-                                src="https://www.youtube.com/embed/LMPqAMfKakI?autoplay=1&mute=1&rel=0"
-                                title="Candy KSA Video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                            <video
+                                className="w-full h-full object-cover"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                controls
+                                src="/videos/candy-video.mp4"
+                            >
+                                <source src="/videos/candy-video.mp4" type="video/mp4" />
+                                متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
                         )}
                     </div>
                 </div>
