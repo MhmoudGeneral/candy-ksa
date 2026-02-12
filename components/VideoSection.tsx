@@ -80,16 +80,13 @@ export default function VideoSection() {
                             // In a real scenario, use video tag for self-hosted or iframe for YT.
                             // Here using a generic pleasant candy video from Pexels (Direct link if possible) or just a YouTube embed.
                             // Using a satisfying chocolate video ID from YouTube as placeholder.
-                            <video
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                muted // Muted for autoplay policy compliance, let user unmute
-                                loop
-                                controls
-                                src="https://videos.pexels.com/video-files/4109961/4109961-hd_1920_1080_25fps.mp4"
-                            >
-                                Your browser does not support the video tag.
-                            </video>
+                            <iframe
+                                className="w-full h-full"
+                                src="https://www.youtube.com/embed/S_8b6r_c57s?autoplay=1&rel=0"
+                                title="Cinematic Chocolate"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         )}
                     </div>
                 </div>
