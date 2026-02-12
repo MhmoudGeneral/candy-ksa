@@ -275,6 +275,31 @@ export default function CheckoutPage() {
                   />
                 </div>
 
+                {/* Terms and Conditions */}
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="terms"
+                      name="terms"
+                      type="checkbox"
+                      required
+                      className="focus:ring-emerald-500 h-4 w-4 text-emerald-600 border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="mr-3 text-sm">
+                    <label htmlFor="terms" className="font-medium text-gray-700">
+                      أوافق على{' '}
+                      <a href="/policies/terms" target="_blank" className="text-emerald-600 hover:text-emerald-500 underline">
+                        الشروط والأحكام
+                      </a>
+                      {' '}و{' '}
+                      <a href="/policies/privacy" target="_blank" className="text-emerald-600 hover:text-emerald-500 underline">
+                        سياسة الخصوصية
+                      </a>
+                    </label>
+                  </div>
+                </div>
+
                 {/* Submit Button */}
                 <button
                   type="submit"
