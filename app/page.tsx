@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
+import VideoSection from '@/components/VideoSection'
 import productsData from '@/utils/products.json'
 import categoriesData from '@/utils/categories.json'
 
@@ -10,6 +11,7 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
+      <VideoSection />
 
       {/* Categories */}
       <section className="py-14">
