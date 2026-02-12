@@ -59,9 +59,9 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-bold text-gray-900 text-lg mb-1">العنوان</h3>
                                 <p className="text-gray-700">
-                                    71 شارع الملك عبدالعزيز، حي الملقا
+                                    2985 King Abdulaziz St, الدمام 32415
                                 </p>
-                                <p className="text-gray-500 text-sm mt-1">الرياض، المملكة العربية السعودية</p>
+                                <p className="text-gray-500 text-sm mt-1">Saudi Arabia</p>
                             </div>
                         </div>
                     </div>

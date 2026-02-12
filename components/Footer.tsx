@@ -125,7 +125,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-right">
             <span className="text-gray-500 text-sm">© {currentYear} كاندي السعودية. جميع الحقوق محفوظة.</span>
             <span className="text-gray-600 text-xs hidden md:inline">|</span>
-            <span className="text-gray-500 text-sm">71 شارع الملك عبدالعزيز، الرياض، المملكة العربية السعودية</span>
+            <span className="text-gray-500 text-sm">2985 King Abdulaziz St, الدمام 32415, Saudi Arabia</span>
           </div>
 
           <div className="flex items-center gap-2 text-sm text-gray-500">
