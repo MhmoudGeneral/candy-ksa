@@ -124,14 +124,15 @@ export default function Footer() {
         <div className="border-t border-gray-800/50 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-right">
             <span className="text-gray-500 text-sm">© {currentYear} كاندي السعودية. جميع الحقوق محفوظة.</span>
+            <span className="text-gray-600 text-xs hidden md:inline">|</span>
+            <span className="text-gray-500 text-sm">71 شارع الملك عبدالعزيز، الرياض، المملكة العربية السعودية</span>
           </div>
 
-          <div className="flex items-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-            <Image src="/logos/Vision 2030-01.png" alt="Vision 2030" width={60} height={35} className="object-contain invert brightness-0 hover:brightness-100 hover:invert-0 transition-all" />
-            <div className="w-px h-6 bg-gray-800"></div>
-            <Image src="/logos/Mada-01.png" alt="Mada" width={40} height={25} className="object-contain" />
-            <Image src="/logos/Visa-01.png" alt="Visa" width={40} height={25} className="object-contain" />
-            <Image src="/logos/Mastercard-01.png" alt="Mastercard" width={40} height={25} className="object-contain" />
+          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <span>الدفع عند الاستلام</span>
+            <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
           </div>
         </div>
       </div>

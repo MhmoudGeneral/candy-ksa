@@ -53,6 +53,17 @@ export default function ContactPage() {
                                 <p className="text-gray-500 text-sm mt-1">9:00 صباحاً - 10:00 مساءً</p>
                             </div>
                         </div>
+
+                        <div className="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 transition hover:bg-white hover:shadow-sm">
+                            <span className="text-3xl">📍</span>
+                            <div>
+                                <h3 className="font-bold text-gray-900 text-lg mb-1">العنوان</h3>
+                                <p className="text-gray-700">
+                                    71 شارع الملك عبدالعزيز، حي الملقا
+                                </p>
+                                <p className="text-gray-500 text-sm mt-1">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

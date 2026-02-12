@@ -342,31 +342,19 @@ export default function CheckoutPage() {
 
               <div className="border-t pt-6">
                 <h3 className="text-lg font-bold mb-4 text-gray-800">طريقة الدفع</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center p-3 bg-emerald-50 border-2 border-emerald-500 rounded-lg">
-                    <input
-                      type="radio"
-                      id="cod"
-                      name="payment"
-                      defaultChecked
-                      className="w-4 h-4 text-emerald-600"
-                    />
-                    <label htmlFor="cod" className="mr-3 text-gray-700 font-medium">
-                      الدفع عند الاستلام
-                    </label>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 border border-gray-300 rounded-lg opacity-50">
-                    <input type="radio" id="card" name="payment" disabled className="w-4 h-4" />
-                    <label htmlFor="card" className="mr-3 text-gray-500">
-                      بطاقة ائتمانية (قريباً)
-                    </label>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 border border-gray-300 rounded-lg opacity-50">
-                    <input type="radio" id="wallet" name="payment" disabled className="w-4 h-4" />
-                    <label htmlFor="wallet" className="mr-3 text-gray-500">
-                      محفظة إلكترونية (قريباً)
-                    </label>
-                  </div>
+                <div className="flex items-center p-4 bg-emerald-50 border-2 border-emerald-500 rounded-lg shadow-sm">
+                  <input
+                    type="radio"
+                    id="cod"
+                    name="payment"
+                    checked // Always checked since it's the only option
+                    readOnly // Make it read-only
+                    className="w-5 h-5 text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <label htmlFor="cod" className="mr-3 text-gray-800 font-bold flex items-center gap-2">
+                    الدفع عند الاستلام (شامل الضريبة)
+                    <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                  </label>
                 </div>
               </div>
 
