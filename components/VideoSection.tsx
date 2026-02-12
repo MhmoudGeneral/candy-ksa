@@ -82,8 +82,8 @@ export default function VideoSection() {
                             // Using a satisfying chocolate video ID from YouTube as placeholder.
                             <iframe
                                 className="w-full h-full"
-                                src="https://www.youtube.com/embed/S_8b6r_c57s?autoplay=1&rel=0"
-                                title="Cinematic Chocolate"
+                                src="https://www.youtube.com/embed/Ni_X4X2rXF0?autoplay=1&mute=1&rel=0"
+                                title="Galaxy Chocolate"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>
