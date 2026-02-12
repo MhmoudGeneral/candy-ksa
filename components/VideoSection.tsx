@@ -77,15 +77,17 @@ export default function VideoSection() {
                             </div>
                         ) : (
                             <video
-                                className="w-full h-full object-cover"
+                                ref={videoRef}
+                                className="w-full h-full object-cover bg-black"
                                 autoPlay
                                 muted
                                 loop
                                 playsInline
                                 controls
+                                preload="auto"
+                                poster="/logo.png"
                                 src="/videos/candy-video.mp4"
                             >
-                                <source src="/videos/candy-video.mp4" type="video/mp4" />
                                 متصفحك لا يدعم تشغيل الفيديو.
                             </video>
                         )}
